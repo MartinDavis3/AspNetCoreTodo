@@ -6,14 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Todo\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Views\Todo\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
 
