@@ -1,4 +1,5 @@
 ﻿@model TodoViewModel
+@using Humanizer
 @{
     ViewData["Title"] = "Manage your todo list";
 }
@@ -10,8 +11,6 @@
                 <td>&#x2714;</td>
                 <td>Item</td>
                 <td>Due</td>
-                Create a view
-                28
             </tr>
         </thead>
         @foreach (var item in Model.Items)
@@ -21,11 +20,11 @@
                     <input type="checkbox" class="done-checkbox">
                 </td>
                 <td>@item.Title</td>
-                <td>@item.DueAt</td>
+                <td>@item.DueAt.Humanize()</td>
             </tr>
         }
     </table>
     <div class="panel-footer add-item-form">
-        <!-- TODO: Add item form -->
+        @await Html.PartialAsync("AddItemPartial", new TodoItem())
     </div>
 </div>

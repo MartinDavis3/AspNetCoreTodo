@@ -39,7 +39,8 @@ namespace AspNetCoreTodo
             services.AddMvc();
 
             //Dependency Injection
-            services.AddSingleton<ITodoItemService, FakeTodoItemService>();
+            //services.AddSingleton<ITodoItemService, FakeTodoItemService>();
+            services.AddScoped<ITodoItemService, TodoItemService>();
 
         }
 
